@@ -10,12 +10,14 @@ namespace Cassino
             double odds = .75;
             Random random = new Random();
 
-            Guy player = new Guy() { Cash = 100, Name = "The Player" };
+            Guy player = new Guy() { Cash = 100, Name = "Player 1" };
+            Guy player2 = new Guy() { Cash = 100, Name = "Player 2" };
 
             Console.WriteLine("Welcome to the Cassino. The odds are " + odds.ToString("F2", CultureInfo.InvariantCulture));
             while (player.Cash > 0)
             {
                 player.WriteMyInfo();
+                player2.WriteMyInfo();
                 Console.Write("How much money do you want to bet: ");
                 string howMuch = Console.ReadLine();
                 if (int.TryParse(howMuch, out int amount))
